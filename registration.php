@@ -28,6 +28,20 @@ echo "3. " . '<input type="text" name="course3"><br><br>';
 echo '<input type="submit" value="Submit"></form>';
 echo '</body></html>';
 
+if (!empty($_GET['course1']) && !empty($_GET['course2']) && !empty($_GET['course3'])) {
+$class1 = $_GET['course1'];
+$class2 = $_GET['course2'];
+$class3 = $_GET['course3'];
+
+$_SESSION['student']->set_class1($class1);
+$_SESSION['student']->set_class2($class2);
+$_SESSION['student']->set_class3($class3);
+
+header('Location: display.php');
+
+}
+
+
 
 
 

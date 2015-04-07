@@ -78,7 +78,7 @@ function set_class1($value){
 
     $error_message = TRUE;
 
-    (ctype_alpha($value) && strlen($value) <= 60) ? $this->class1 = $value : $error_message = FALSE;
+    (ctype_alnum($value) && strlen($value) <= 60) ? $this->class1 = $value : $error_message = FALSE;
 
     return $error_message;
 
@@ -88,7 +88,7 @@ function set_class2($value){
 
     $error_message = TRUE;
 
-    (ctype_alpha($value) && strlen($value) <= 60) ? $this->class2 = $value : $error_message = FALSE;
+    (ctype_alnum($value) && strlen($value) <= 60) ? $this->class2 = $value : $error_message = FALSE;
 
     return $error_message;
 
@@ -98,7 +98,7 @@ function set_class3($value){
 
     $error_message = TRUE;
 
-    (ctype_alpha($value) && strlen($value) <= 60) ? $this->class3 = $value : $error_message = FALSE;
+    (ctype_alnum($value) && strlen($value) <= 60) ? $this->class3 = $value : $error_message = FALSE;
 
     return $error_message;
 
