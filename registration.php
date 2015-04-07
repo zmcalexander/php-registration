@@ -15,7 +15,7 @@ echo "Welcome, " . $studentInfo->get_fName();
 $coursesTextArray = file("classes.txt", FILE_IGNORE_NEW_LINES);
 echo "<br><br>List of available courses: <br>";
 foreach ($coursesTextArray as $course) {
-	list($courseNumber, $courseName) = explode('.', $course);
+	list($courseNumber, $courseName, $studentsEnrolled) = explode('.', $course);
 	echo $courseNumber . " | " . $courseName;
 	echo "<br>";
 }

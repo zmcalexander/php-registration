@@ -1,5 +1,5 @@
 student.password.Test.Student.Business
 zmcalexander.1234.Zach.McAlexander.Biology
 zmcalexander.Zach.McAlexander.SoftwareEngineering.CIST1001.CIST1305.CIST1510
-robert.Robert.Barwick.Computer Programming
-jmarson.John.Marson.Biomedical Engineering
+robert.Robert.Barwick.ComputerProgramming
+jmarson.John.Marson.BiomedicalEngineering
