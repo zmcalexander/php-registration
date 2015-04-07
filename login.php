@@ -43,15 +43,17 @@ if ($found == true) {
 	fclose($openLogFile);
 	// create student object and store student information 
 	$array = file("students.txt");
-	for($i = 0; $i < count($array); $i++){    //while $i is less than or equal to the number of elements in the array the loop runs.
-     if(stristr($array[$i], $_POST['username'])){    //same as other example
+	for($i = 0; $i < count($array); $i++){  
+     if(stristr($array[$i], $_POST['username'])){ 
           $student_info = $array[$i];
 		  list($userName, $firstName, $lastName, $major, $class1, $class2, $class3) = explode('.', $student_info);
+		  $major = preg_replace('/\s+/', '', $major);
+		  echo "Major: " . $major;
 		  $student = new Student($userName, $firstName, $lastName, $major, $class1, $class2, $class3);
 		  $_SESSION['student'] = $student;
      }
 	}
-	 header('Location: registration.php');
+	  header('Location: registration.php');
 } 
 }
 echo "New user? " . '<a href="register.php">Click here to register.</a>';
