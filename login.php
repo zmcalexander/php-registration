@@ -1,6 +1,7 @@
 <?php
-session_start();
 include('Student.php');
+session_start();
+
 ?>
 
 <?php
@@ -45,8 +46,8 @@ if ($found == true) {
 	for($i = 0; $i < count($array); $i++){    //while $i is less than or equal to the number of elements in the array the loop runs.
      if(stristr($array[$i], $_POST['username'])){    //same as other example
           $student_info = $array[$i];
-		  list($userName, $firstName, $lastName, $major) = explode('.', $student_info);
-		  $student = new Student($userName, $firstName, $lastName, $major, "", "", "");
+		  list($userName, $firstName, $lastName, $major, $class1, $class2, $class3) = explode('.', $student_info);
+		  $student = new Student($userName, $firstName, $lastName, $major, $class1, $class2, $class3);
 		  $_SESSION['student'] = $student;
      }
 	}

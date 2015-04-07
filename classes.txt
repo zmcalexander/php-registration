@@ -1,0 +1,11 @@
+COMP 1000.Introduction to Computers.0
+ACCT 1100.Financial Accounting I.0
+CIST 1001.Computer Concepts.0
+CIST 1220.Structured Query Language (SQL).0
+CIST 1305.Program Design and Development.0
+CIST 1510.Web Development I.0
+CIST 1601.Information Security Fundamentals.0
+CIST 2371.Java Programming I.0
+CIST 2372.Java Programming II.0
+CIST 2373.Java Programming III.0
+CIST 2921.IT Analysis Design and Project Management.0
