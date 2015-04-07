@@ -1,9 +1,9 @@
 <?php
 session_start();
+include('Student.php');
 ?>
 
 <?php
-include('Student.php');
 echo '<html>';
 echo '<head>';
 echo '<title>Student Registration</title>';
@@ -15,14 +15,15 @@ echo "Username: " . '<input type="text" name="username"><br><br>';
 echo "Password: " . '<input type="password" name="password"><br><br>';
 echo '<input type="submit" value="Submit"></form>';
 echo '</body></html>';
+if (!empty($_POST['username']) && !empty($_POST['password'])) {
 $username = $_POST['username'];
 $password = $_POST['password'];
 $openedFile = fopen("login.txt", "a");
-$loginTxtArray = file("login.txt");
+$loginTxtArray = file("login.txt", FILE_IGNORE_NEW_LINES);
 $studentLogin = $username . '.' . $password;
 $found = false;
 foreach ($loginTxtArray as $login) {
-	if ($login == $studentLogin) {
+	if ($studentLogin === $login) {
 		$found = true;
 	}
 }
@@ -33,29 +34,25 @@ $currenttime = date('h:i:s:u');
 list($hrs,$mins,$secs,$msecs) = explode(':',$currenttime);
 $time = "$hrs:$mins:$secs\n";
 
-
-if ($found == true) {
-	// header('Location: registration.php');
+if ($found == true) {		
 	$openLogFile = fopen("log.txt", "a");
 	// create variable for login time/username
 	$login = $username . '.' . $time;
 	fputs($openLogFile, $login);
 	fclose($openLogFile);
 	// create student object and store student information 
-	$studentInfo = file_get_contents("students.txt");
-	echo $studentInfo;
-	$studentStart = strpos($studentInfo, $_POST['username']);
-	if ($studentStart === false) {
-	echo "This didn't work";
-	} else {
-		echo $studentStart;
+	$array = file("students.txt");
+	for($i = 0; $i < count($array); $i++){    //while $i is less than or equal to the number of elements in the array the loop runs.
+     if(stristr($array[$i], $_POST['username'])){    //same as other example
+          $student_info = $array[$i];
+		  list($userName, $firstName, $lastName, $major) = explode('.', $student_info);
+		  $student = new Student($userName, $firstName, $lastName, $major, "", "", "");
+		  $_SESSION['student'] = $student;
+     }
 	}
-
-
+	 header('Location: registration.php');
 } 
-   
-
+}
 echo "New user? " . '<a href="register.php">Click here to register.</a>';
 
 ?>
-

@@ -1,1 +1,3 @@
-zmcalexander.1234.Zach.McAlexander.Computer Science|johnny.1234.John.Marson.Biology|
+student.password.Test.Student.Business
+zmcalexander.1234.Zach.McAlexander.Biology
+zmcalexander.Zach.McAlexander.Software Engineering
