@@ -1,5 +1,5 @@
 student.password.Test.Student.Business
-zmcalexander.Zach.McAlexander.SoftwareEngineering.CIST2371.CIST2372.CIST2373
+zmcalexander.Zach.McAlexander.SoftwareEngineering.COMP1000.CIST1001.
 robert.Robert.Barwick.ComputerProgramming.CIST2371.CIST2372.CIST2373
 jmarson.John.Marson.nada.CIST1601.CIST2372.CIST2371
 ericb.Eric.Jameson.nada.CIST2371.CIST2372.CIST2373

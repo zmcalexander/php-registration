@@ -32,7 +32,7 @@ echo '</body></html>';
 
 $array = file("classes.txt");
 	for($i = 0; $i < count($array); $i++){  
-	if (isset($_GET['course1'])) {
+	if (isset($_GET['course1']) && (!empty($_GET['course1']))) {
      if(stristr($array[$i], $_GET['course1'])){ 
           $course1Info = $array[$i];
 		  list($courseName, $courseNumber, $numberRegistered) = explode('.', $course1Info);
@@ -51,7 +51,7 @@ $array = file("classes.txt");
 		  
 	 }
      }
-	 if (isset($_GET['course2'])) {
+	 if (isset($_GET['course2']) && (!empty($_GET['course2']))) {
 	 if(stristr($array[$i], $_GET['course2'])){ 
           $course2Info = $array[$i];
 		  list($courseName, $courseNumber, $numberRegistered) = explode('.', $course2Info);
@@ -71,7 +71,7 @@ $array = file("classes.txt");
 	 }  
      }
 	 
-	 if (isset($_GET['course3'])) {
+	 if (isset($_GET['course3']) && (!empty($_GET['course3']))) {
 	 if(stristr($array[$i], $_GET['course3'])){ 
           $course3Info = $array[$i];
 		  list($courseName, $courseNumber, $numberRegistered) = explode('.', $course3Info);
@@ -98,7 +98,7 @@ $array = file("classes.txt");
 
 
 
-if (!empty($_GET['course1']) && !empty($_GET['course2']) && !empty($_GET['course3'])) {
+if (!empty($_GET['course1']) || !empty($_GET['course2']) || !empty($_GET['course3'])) {
 			$course1 = $_GET['course1'];
 			$course2 = $_GET['course2'];
 			$course3 = $_GET['course3'];

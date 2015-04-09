@@ -1,11 +1,11 @@
-COMP1000.Introduction to Computers.32
+COMP1000.Introduction to Computers.33
 ACCT1100.Financial Accounting I.31
-CIST1001.Computer Concepts.30
+CIST1001.Computer Concepts.31
 CIST1220.Structured Query Language.30
 CIST1305.Program Design and Development.30
 CIST1510.Web Development I.30
-CIST1601.Information Security Fundamentals.1
-CIST2371.Java Programming I.12
-CIST2372.Java Programming II.12
+CIST1601.Information Security Fundamentals.8
+CIST2371.Java Programming I.15
+CIST2372.Java Programming II.14
 CIST2373.Java Programming III.11
 CIST2921.IT Analysis Design and Project Management.0

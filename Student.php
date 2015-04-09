@@ -4,17 +4,17 @@ class Student {
 
 public $sid = 0;
 
-public $fName = "nada";
+public $fName = "";
 
-public $lName = "nada";
+public $lName = "";
 
-public $major = "nada";
+public $major = "";
 
-public $class1 = "nada";
+public $class1 = "";
 
-public $class2 = "nada";
+public $class2 = "";
 
-public $class3 = "nada";
+public $class3 = "";
 
 // -+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=* Constructor -+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*-+=*
 
